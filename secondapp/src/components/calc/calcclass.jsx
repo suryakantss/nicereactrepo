@@ -5,7 +5,7 @@ export class CalcClass extends React.Component {
     n2ref = createRef();
     state = {res:''};
     doAdd = ()=>{
-        this.setState({res: parseInt(this.n1ref.current.value)+parseInt(this.n2ref.current.value)});
+        this.setState({res:parseInt(this.n1ref.current.value)+parseInt(this.n2ref.current.value)});
        
     }
     render() {
