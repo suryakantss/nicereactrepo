@@ -3,10 +3,24 @@ import React, { createRef } from "react";
 export default class CalcClass extends React.Component {
     n1ref = createRef();
     n2ref = createRef();
-    state = {res:''};
-    doAdd = ()=>{
-        this.setState({res:parseInt(this.n1ref.current.value)+parseInt(this.n2ref.current.value)});
-       
+    state = { res: '' };
+    doAdd = () => {
+        this.setState({ res: parseInt(this.n1ref.current.value) + parseInt(this.n2ref.current.value) });
+
+    }
+
+    componentDidMount() {
+        console.log('calcclass..mounted');
+    }
+    componentDidUpdate(pprops,pstate){
+        console.log('calcclass updated...' + JSON.stringify(pstate));
+    }
+
+    shouldComponentUpdate(){
+        return true;
+    }
+    componentWillUnmount() {
+        console.log('calcclass..unmounted');
     }
     render() {
         return (
