@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function Calc() {
     let n1ref = useRef();
@@ -20,15 +20,9 @@ export default function Calc() {
     }, []);
 
 
-    /*
-    function doAdd(e){
-        alert(e.type);
-        alert(e.target.textContent)
-    }*/
-
-    
-    function doAdd() {
+     function doAdd() {
         setMsg(parseInt(n1ref.current.value) + parseInt(n2ref.current.value));
+  
     }
     return (
         <>
