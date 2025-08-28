@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-export function Calc(){
+export default function Calc(){
     let n1ref = useRef();
     let n2ref = useRef();
     let [msg,setMsg] = useState('');

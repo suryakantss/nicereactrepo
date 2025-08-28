@@ -1,6 +1,6 @@
 import React, { createRef } from "react";
 
-export class CalcClass extends React.Component {
+export default class CalcClass extends React.Component {
     n1ref = createRef();
     n2ref = createRef();
     state = {res:''};

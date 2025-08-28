@@ -1,4 +1,4 @@
-export function Movies(){
+export default function Movies(){
     let mlist = ['John Carter','Battle Ship','Bee Keeper'];
     return (
         <div>
