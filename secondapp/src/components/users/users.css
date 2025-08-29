@@ -1,0 +1,5 @@
+table,tr,td,th{
+    width: 800px;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}

@@ -1,8 +1,8 @@
 import './home.css';
-export function Home(){
+export function Home(props){
     return (
         <>
-        <h3 className='mystyle'>Home</h3>
+        <h3 className='mystyle'>{props.msg}</h3>
         </>
     )
 }
