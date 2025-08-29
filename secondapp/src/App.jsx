@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import './App.css'
 import { Home } from './components/home/home';
 import { Link, Route, Routes } from 'react-router';
+import { Details } from './components/cars/details';
 
 const Profile = lazy(() => import('./components/profile/profile'));
 const CalcClass = lazy(() => import('./components/calc/calcclass'));
@@ -13,6 +14,8 @@ const SignUp = lazy(() => import('./components/signup/signup'));
 const Parent = lazy(() => import('./components/parent/parent'));
 const Blog = lazy(() => import('./components/blog/blog'));
 const Users = lazy(() => import('./components/users/users'));
+const Cars = lazy(() => import('./components/cars/cars'));
+
 
 
 
@@ -31,7 +34,8 @@ function App() {
         <Link to='parent'>Parent</Link>
         <Link to='blog'>Blog</Link>
         <Link to='users'>Users</Link>
-        
+        <Link to='cars'>Cars</Link>
+
       </div>
       <div>
         <Suspense fallback={<div>loading.....</div>}>
@@ -46,7 +50,9 @@ function App() {
             <Route path='parent' element={<Parent></Parent>}></Route>
             <Route path='blog' element={<Blog></Blog>}></Route>
             <Route path='users' element={<Users></Users>}></Route>
-            
+            <Route path='cars' element={<Cars></Cars>}>
+              <Route path='details/:id' element={<Details></Details>}></Route>
+            </Route>
           </Routes>
         </Suspense>
       </div>
